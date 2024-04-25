@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Page d'accueil {% endblock %}
+
+{% block monTitre %} Voici la liste les animaux {% endblock %}
+
+{% block body %}
+    
+    <div class='container'>
+    {% for animal in animaux %} 
+        <div class="row align-items-center">
+            
+            <div class="col-2 text-center">
+                <img src="{{ asset('images/' ~ animal.image) }}">
+            </div>
+
+            <div class="col-auto">
+                <h2><a href="{{ path('afficher_animal',{'id': animal.id}) }}">{{ animal.nom }}</a></h2>
+                <div>{{ animal.description }}</div>
+            </div>
+        </div>
+    
+    {% endfor %}
+    </div>
+                    
+{% endblock %}
