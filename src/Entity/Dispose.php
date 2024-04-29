@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 #[ORM\Entity(repositoryClass: DisposeRepository::class)]
-#[UniqueEntity(fields: ['animal', 'personne'], message: 'Cette personne a déjà adopté cet animal')]
+#[UniqueEntity(fields: ['animal', 'personne'])]
 class Dispose
 {
     #[ORM\Id]

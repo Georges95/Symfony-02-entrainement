@@ -2,11 +2,10 @@
 
 {% block title %}Continents{% endblock %}
 
-{% block monTitre %}Continent : {% endblock %}
+{% block monTitre %}Continent : {{continent.libelle}}{% endblock %}
 
 {% block body %}
-
-   
+<div class='container'>   
     <div class="row">
         {% for animal in continent.animaux %}
         <div class="col-6">
@@ -36,4 +35,5 @@
 
         {% endfor %}
     </div>
+</div>
 {% endblock %}

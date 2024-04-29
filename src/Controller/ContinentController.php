@@ -19,6 +19,7 @@ class ContinentController extends AbstractController
         ]);
     }
     
+    
     #[Route('/continent/{id}', name: 'afficher_continent')]
     public function afficherContinent(Continent $continent): Response
     {

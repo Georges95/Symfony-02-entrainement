@@ -63,6 +63,7 @@ class AnimalFixtures extends Fixture
         $c3->setDescription('Animaux invertébrés du monde aquatique');
         $manager->persist($c3);
 
+        
         $a1 = new Animal();
         $a1->setNom('Chien');
         $a1->setDescription('Animal domestique');
